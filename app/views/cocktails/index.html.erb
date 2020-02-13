@@ -1,1 +1,25 @@
-<h1>Testing if this works</h1>
+<div class="cocktails-index">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://makemeacocktail.com/blog/wp-content/uploads/2019/02/a1.jpg);">
+    <div class="container">
+      <h1><strong>David's Cocktail Assignment</strong></h1>
+    </div>
+  </div>
+</div>
+<div class="container mt-3">
+
+    <div class="cards">
+
+      <% @cocktails.each do |cocktail| %>
+        <%= link_to cocktail_path(cocktail), class: "link-santi" do %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://cdn.diffords.com/contrib/stock-images/2018/5/20/2018ffe7ab4ebbc48d2f34715c870cce5a10.jpg)">
+            <h3><%= cocktail.name %></h3>
+          </div>
+        <% end %>
+      <% end %>
+
+    </div>
+
+  </div>
+
+
+

@@ -1,0 +1,28 @@
+<div class="cocktails-index">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://makemeacocktail.com/blog/wp-content/uploads/2019/02/a1.jpg);">
+</div>
+
+<div class="card">
+   <div class="header">
+      <div class="icon">
+      </div>
+   </div>
+   <div class="text">
+      <h1 class="food">
+         <%= @cocktail.name %></h1>
+      <i class="fa fa-clock-o"> 2 Mins</i>
+
+      <div class="stars">
+         <li>
+            <a href="#"><i class="fa fa-star"></i></a>
+            <a href="#"><i class="fa fa-star"></i></a>
+            <a href="#"><i class="fa fa-star"></i></a>
+            <a href="#"><i class="fa fa-star"></i></a>
+            <a href="#"><i class="fa fa-star-o"></i></a>
+         </li>
+      </div>
+      <% @cocktail.doses.each do |dose| %>
+  <div class="dose"> <p class="info"> <%= dose.ingredient.name %>: <%= dose.description %></p></div>
+<% end %>
+   </div>
+</div>
